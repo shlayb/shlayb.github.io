@@ -1,8 +1,11 @@
 <html>
     <head>
-        <title>belajar buat doi</title>
+        <title>my girl</title>
         <script src="https://kit.fontawesome.com/11fad7c8a5.js" crossorigin="anonymous"></script>
         <style>
+            body{
+                background-image: url('https://media.discordapp.net/attachments/901679715453116427/901679820759523328/BACKGROUND.png?width=1201&height=676');
+            }
             .myDiv{
                 width: 1920px;
                 height: 1080px;
@@ -11,15 +14,15 @@
                 width: 1920px;
                 height: 200px;
                 background-color: #e5d5c6;
-                border-radius: 30px;
+                border-radius: 12px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border: 0px solid black;
             }
             .h1{
                 font-size: 70px;
                 font-family: retron2000;
                 color: #b97836;
                 text-align: center;
-                top: 65px;
             }
             .gap{
                 width: 1080px;
@@ -30,7 +33,7 @@
                 height: 570px;
                 border-radius: 24px;
                 background-color: #e7b7a0;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 32px 0 rgba(0, 0, 0, 0.19);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
             }
             .alic{
                 width: 308px;
@@ -66,13 +69,37 @@
                 font-family: retron2000;
                 font-size: 15px;
             }
+            .div2{
+                width: 1000px;
+                height: 700px;
+            }
+            .spotify{
+                width: 250px;
+                height: 60px;
+                border-radius: 24px;
+                background-color: #e6be8b;
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
+                font-family: calibri;
+                font-size: 30px;
+                font-weight: bolder;
+                color: #b17132;
+            }
+            .spotify:hover{
+                background-color: #e6b370;
+            }
+            .spotify:active{
+                background-color: #e6b370;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
+                transform: translateY(4px);
+            }
         </style>
     </head>
 
     <body style="background-color: #efe6dd;">
         <div class="myDiv">
-            <div class="kotak" style="position: absolute; top: 0;">
-                <h1 class="h1"> Alicia <i class="fas fa-heart"></i>  </h1>
+            <div class="kotak" style="position: absolute; top: 0px;">
+                <h1 class="h1" > Alicia <i class="fas fa-heart"></i>  </h1>
             </div>
             <div class="gap"></div>
             <div id="By" class="fotouwu" style="position: absolute; left: 150px;">
@@ -85,6 +112,12 @@
                     <source src="https://cdn.discordapp.com/attachments/881541248522022952/901489446103433216/y2mate.com_-_keshi_beside_you_Lyric_Video.mp3" type="audio/mp3">
                 </audio>
                 <button onclick="playaudio();" class="play" style="position: absolute; left: 170px; top: 470px;"> <i class="fas fa-play"></i></button>
+                <form action="https://open.spotify.com/playlist/0x9jUlxIUEQudNHRvgFddG?si=77fa9f29dcff48ea">
+                <button type="submit" class="spotify" style="position: absolute; left: 540px; top:100px ;">PlayList for u</button>
+                </form>
+                <form action="" >
+                    <button class="spotify" style="position: absolute; left: 540px; top: 190px;"></button>
+                </form>
             </div>
         </div>
         <script>
@@ -96,11 +129,6 @@
                 else
                   x.pause();
             }
-            myAudio=document.getElementById("myAudio");
-            myAudio=document.addEventListener("canplaythrough", function() {
-                this.currentTime = 12;
-                this.play();
-            })
         </script>
     </body>
 </html>
