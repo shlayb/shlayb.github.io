@@ -65,13 +65,16 @@
                 text-align: none;
                 font-weight: 900;
             }
-            .keshi{
+            .penyanyi{
                 font-family: retron2000;
                 font-size: 15px;
             }
             .div2{
-                width: 1000px;
-                height: 700px;
+                width: 800px;
+                height: 570px;
+                background-color: #e7b7a0;
+                border-radius: 24px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
             }
             .spotify{
                 width: 250px;
@@ -93,6 +96,13 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
                 transform: translateY(4px);
             }
+            .foru{
+                font-size: 70px;
+                color: #b97836;
+                font-family: retron2000;
+                font-weight: bolder;
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -106,22 +116,33 @@
                 <img class="alic" src="https://media.discordapp.net/attachments/732450473390374973/893847640687673344/babe.png?width=660&height=675" alt="" 
                 style="position: absolute; left: 48px; top: 48px;">
                 <p class="judullagu" style="position: absolute; top: 380px; left: 48px;">Beside You</p>
-                <p class="keshi" style="position: absolute; top: 407px; left: 48px;">keshi</p>
+                <p class="penyanyi" style="position: absolute; top: 407px; left: 48px;">keshi</p>
                 <p style="position: absolute; font-size: 30px; left: 315px; top: 375px;"><i class="far fa-heart"></i></p>
                 <audio id="myAudio" autoplay>
                     <source src="https://cdn.discordapp.com/attachments/881541248522022952/901489446103433216/y2mate.com_-_keshi_beside_you_Lyric_Video.mp3" type="audio/mp3">
                 </audio>
+                <button id="prev" disabled onclick="prevmusik();" class="play" style="position: absolute; left: 90px; top: 470px;"> <i class="fas fa-backward"></i></button>
                 <button onclick="playaudio();" class="play" style="position: absolute; left: 170px; top: 470px;"> <i class="fas fa-play"></i></button>
-                <form action="https://open.spotify.com/playlist/0x9jUlxIUEQudNHRvgFddG?si=77fa9f29dcff48ea">
-                <button type="submit" class="spotify" style="position: absolute; left: 540px; top:100px ;">PlayList for u</button>
-                </form>
-                <form action="" >
-                    <button class="spotify" style="position: absolute; left: 540px; top: 190px;"></button>
-                </form>
+                <button id="next" onclick="nextmusik();" class="play" style="position: absolute; left: 250px; top: 470px;"> <i class="fas fa-forward"></i></button>
+                <div class="div2" style="position: absolute; left: 500px;">
+                    <p class="foru" >That i Made For U</p>
+                    <form action="https://open.spotify.com/playlist/0x9jUlxIUEQudNHRvgFddG?si=77fa9f29dcff48ea">
+                        <button type="submit" class="spotify" style="position: absolute; left: 50px; top:200px ;">Playlist for u</button>
+                        </form>
+                        <form action="" >
+                            <button class="spotify" style="position: absolute; left: 50px; top: 300px;"></button>
+                        </form>
+                        <form action="" >
+                            <button class="spotify" style="position: absolute; left: 50px; top: 400px;"></button>
+                        </form>
+                </div>
             </div>
         </div>
         <script>
+            var musikkeberapa = 0;
+            var listmusik = [{ link: "https://cdn.discordapp.com/attachments/881541248522022952/901489446103433216/y2mate.com_-_keshi_beside_you_Lyric_Video.mp3", nama: "Beside You", penyanyi: "keshi"}, { link: "https://cdn.discordapp.com/attachments/901460925956112435/901712325336240128/Kaleb_J_-_Its_Only_Me_Official_Lyric_Video.mp3", nama: "Its Only Me", penyanyi: "Kaleb J"}, {link: "https://cdn.discordapp.com/attachments/781732552058732554/901717392747552798/y2meta.com_-_Sezairi_-_Its_You_Official_Music_Video_128_kbps.mp3", nama: "It's You", penyanyi: "Sezairi"} ];
             var x = document.getElementById("myAudio"); 
+            var source = document.getElementById('audioSource');
 
             function playaudio() {
                 if (x.paused)
@@ -129,6 +150,41 @@
                 else
                   x.pause();
             }
+            function prevmusik(){
+                if (musikkeberapa > 0) {
+                x.pause();
+                musikkeberapa -= 1;
+                document.getElementsByClassName("judullagu")[0].textContent = listmusik[musikkeberapa].nama;
+                document.getElementsByClassName("penyanyi")[0].textContent = listmusik[musikkeberapa].penyanyi;
+                source.src = listmusik[musikkeberapa].link;
+                x.load();
+               }
+            }
+
+            function nextmusik(){
+               if (musikkeberapa < listmusik.length) {
+                x.pause();
+                musikkeberapa += 1;
+                document.getElementsByClassName("judullagu")[0].textContent = listmusik[musikkeberapa].nama;
+                document.getElementsByClassName("penyanyi")[0].textContent = listmusik[musikkeberapa].penyanyi;
+                source.src = listmusik[musikkeberapa].link;
+                x.load();
+               }
+            }
+
+            setInterval(function () {
+                if (musikkeberapa > 0) {
+                    document.getElementById("prev").disabled = false;
+                } else{
+                    document.getElementById("prev").disabled = true;
+                }
+
+                if (musikkeberapa < listmusik.length - 1) {
+                    document.getElementById("next").disabled = false;
+                } else{
+                    document.getElementById("next").disabled = true;
+                }
+            }, 1);
         </script>
     </body>
 </html>
