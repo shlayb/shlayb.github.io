@@ -1,201 +1,121 @@
-<html>
-    <head>
-        <title>my girl</title>
-        <script src="https://kit.fontawesome.com/11fad7c8a5.js" crossorigin="anonymous"></script>
-        <style>
-            body{
-                background-image: url('https://media.discordapp.net/attachments/901679715453116427/901679820759523328/BACKGROUND.png?width=1201&height=676');
-            }
-            .myDiv{
-                width: auto;
-                height: auto;
-            }
-            .kotak{
-                width: 100%;
-                height: 200px;
-                background-color: #e5d5c6;
-                border-radius: 12px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border: 0px solid black;
-                position: absolute;
-                left: 0px ;
-            }
-            .h1{
-                font-size: 70px;
-                font-family: retron2000;
-                color: #b97836;
-                text-align: center;
-            }
-            .gap{
-                width: 1080px;
-                height: 300px;
-            }
-            .fotouwu{
-                width: 400px;
-                height: 570px;
-                border-radius: 24px;
-                background-color: #e7b7a0;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
-            }
-            .alic{
-                width: 308px;
-                height: 315px;
-                border-radius: 12px;
-            }
-            .play{
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                font-size: 25px;
-                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-                text-align: center;
-                border: none;
-                background-color: #efe6dd;
-            }
-            .play:hover {
-                background-color: #e5d5c6;
-            }
-            .play:active{
-                background-color: #e5d5c6;
-                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-                transform: translateY(4px);
-            }
-            .judullagu{
-                font-size: 18px;
-                color: #000000;
-                font-family: retron2000;
-                text-align: none;
-                font-weight: 900;
-            }
-            .penyanyi{
-                font-family: retron2000;
-                font-size: 15px;
-                position: absolute;
-                top: 570px;
-            }
-            .div2{
-                width: 200px;
-                height: 250px;
-                background-color: #e7b7a0;
-                border-radius: 24px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
-            }
-            .spotify{
-                width: 150px;
-                height: 60px;
-                border-radius: 24px;
-                background-color: #efe6dd;
-                border: none;
-                box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
-                font-family: calibri;
-                font-size: 25px;
-                font-weight: bolder;
-                color: black;
-            }
-            .spotify:hover{
-                background-color: #e5d5c6;
-                transform: translateY(-2px);
-            }
-            .spotify:active{
-                background-color: #e5d5c6;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
-                transform: translateY(4px);
-            }
-            .foru{
-                font-size: 55px;
-                color: #b97836;
-                font-family: retron2000;
-                font-weight: bolder;
-                text-align: center;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="myDiv">
-            <div class="kotak" style="position: absolute; top: 0px;">
-                <h1  class="h1" > Alicia <i class="fas fa-heart"></i>  </h1>
-            </div>
-            <div class="gap"></div>
-            <div id="By" class="fotouwu" style="position: absolute; left: 250px;">
-                <img class="alic" src="https://media.discordapp.net/attachments/732450473390374973/893847640687673344/babe.png?width=660&height=675" alt="" 
-                style="position: absolute; left: 48px; top: 48px;">
-                <p class="judullagu" style="position: absolute; top: 380px; left: 48px;">Beside You</p>
-                <p class="penyanyi" style="position: absolute; top: 407px; left: 48px;">keshi</p>
-                <i class="fas fa-heart" onclick="lovefunction(this)" style="position: absolute; font-size: 30px; left: 315px; top: 405px;"></i>
-                <audio id="myAudio" autoplay>
-                    <source id="audioSource" src="https://cdn.discordapp.com/attachments/881541248522022952/901489446103433216/y2mate.com_-_keshi_beside_you_Lyric_Video.mp3" type="audio/mpeg">
-                </audio>
-                <button id="prev" disabled onclick="prevmusik();" class="play" style="position: absolute; left: 90px; top: 470px;"> <i class="fas fa-backward"></i></button>
-                <button onclick="playaudio();" class="play" style="position: absolute; left: 170px; top: 470px;"> <i onclick="playfunction(this)" class="fas fa-play"></i></button>
-                <button id="next" onclick="nextmusik();" class="play" style="position: absolute; left: 250px; top: 470px;"> <i class="fas fa-forward"></i></button>
-            </div>
-            <div class="div2" style="position: absolute; left: 700px;">
-                <p class="foru"><i class="fas fa-music"></i></p>
-                <form action="https://open.spotify.com/playlist/0x9jUlxIUEQudNHRvgFddG?si=77fa9f29dcff48ea">
-                    <button type="submit" class="spotify" style="position: absolute; left: 25px; top:150px ;">Playlist <i class="fas fa-list-music"></i> </button>
-                    </form>
-                </div>
-            <div class="div2" style="position: absolute; left: 930px;">
-                <p class="foru"><i class="fas fa-align-left"></i></p>
-                <form action="https://urbemygirl.github.io/" >
-                    <button class="spotify" style="position: absolute; left: 25px; top: 150px;">Puisi</i></button>
-                    </form>
-            </div>
-            <div class="div2" style="position: absolute; left: 1160px;">
-                <p class="foru"><i class="fas fa-paint-brush"></i></p>
-                <form action="https://urbemygurl.github.io/" >
-                    <button class="spotify" style="position: absolute; left: 25px; top: 150px;">Art</i></button>
-                    </form>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shlayb|Portofolio</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">SHLAYB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Social media</a>
+            </li>
+          </ul>
         </div>
-        <script>
-            var musikkeberapa = 0;
-            var listmusik = [{ link: "https://cdn.discordapp.com/attachments/881541248522022952/901489446103433216/y2mate.com_-_keshi_beside_you_Lyric_Video.mp3", nama: "Beside You", penyanyi: "Keshi"}, { link: "https://cdn.discordapp.com/attachments/901460925956112435/901712325336240128/Kaleb_J_-_Its_Only_Me_Official_Lyric_Video.mp3", nama: "Its Only Me", penyanyi: "Kaleb J"}, { link: "https://cdn.discordapp.com/attachments/781732552058732554/901717392747552798/y2meta.com_-_Sezairi_-_Its_You_Official_Music_Video_128_kbps.mp3", nama: "It's You", penyanyi: "Sezairi"}, {link: "https://cdn.discordapp.com/attachments/901679715453116427/902503698775822356/y2mate.com_-_demxntia_i_wont_let_you_feel_alone_again.mp3", nama: " I wont let you feel alone again", penyanyi: "Demxnita"} ];
-            var x = document.getElementById("myAudio"); 
-            var source = document.getElementById('audioSource');
-
-            function playaudio() {
-                if (x.paused)
-                  x.play();
-                else
-                  x.pause();
-            }
-            function prevmusik(){
-                if (musikkeberapa > 0) {
-                x.pause();
-                musikkeberapa -= 1;
-                document.getElementsByClassName("judullagu")[0].textContent = listmusik[musikkeberapa].nama;
-                document.getElementsByClassName("penyanyi")[0].textContent = listmusik[musikkeberapa].penyanyi;
-                source.src = listmusik[musikkeberapa].link;
-                x.load();
-               }
-            }
-
-            function nextmusik(){
-               if (musikkeberapa < listmusik.length) {
-                x.pause();
-                musikkeberapa += 1;
-                document.getElementsByClassName("judullagu")[0].textContent = listmusik[musikkeberapa].nama;
-                document.getElementsByClassName("penyanyi")[0].textContent = listmusik[musikkeberapa].penyanyi;
-                source.src = listmusik[musikkeberapa].link;
-                x.load();
-               }
-            }
-
-            setInterval(function () {
-                if (musikkeberapa > 0) {
-                    document.getElementById("prev").disabled = false;
-                } else{
-                    document.getElementById("prev").disabled = true;
-                }
-
-                if (musikkeberapa < listmusik.length - 1) {
-                    document.getElementById("next").disabled = false;
-                } else{
-                    document.getElementById("next").disabled = true;
-                }
-            }, 1);
-        </script>
-    </body>
+      </div>
+    </nav>
+    <!-- end  navbar -->
+    <!-- jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="img/shlayb-01.png" alt="my logo" width="200px" class="rounded-circle" />
+      <h1 class="display-4" style="color: white">Hello, world!</h1>
+      <p class="lead" style="color: white">Iam a student</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,288L0,192L240,192L240,256L480,256L480,64L720,64L720,128L960,128L960,224L1200,224L1200,96L1440,96L1440,320L1200,320L1200,320L960,320L960,320L720,320L720,320L480,320L480,320L240,320L240,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- end -->
+    <!-- about me -->
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-">
+          <h2>About Me</h2>
+        </div>
+        <div class="row justify-content-around fs-4 text-center mt-5">
+          <div class="col-md-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe id, accusamus alias nemo aliquid quaerat, beatae vero corrupti non reiciendis quisquam praesentium assumenda!</div>
+          <div class="col-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque ipsam incidunt aut maxime sunt, cupiditate illum repellat vel corporis quibusdam optio voluptatibus nam.</div>
+        </div>
+      </div>
+      </svg>
+    </div>
+    <!-- end -->
+    <div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#535353"
+          fill-opacity="1"
+          d="M0,32L0,160L240,160L240,224L480,224L480,288L720,288L720,64L960,64L960,192L1200,192L1200,128L1440,128L1440,320L1200,320L1200,320L960,320L960,320L720,320L720,320L480,320L480,320L240,320L240,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <!-- procject -->
+    <section id="projects" style="background-color: #535353">
+      <div class="container">
+        <div class="row text-center ">
+          <div class="col mt-3">
+            <h3>My Project</h3>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4 mb-3">
+            <div class="card" >
+              <img src="img/pi 1.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text" style="text-align: center;">PROJECT 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" >
+              <img src="img/pi 2.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text" style="text-align: center;">PROJECT 2</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="img/pi 3.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text" style="text-align: center;">PROJECT 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,288L0,192L240,192L240,256L480,256L480,64L720,64L720,128L960,128L960,224L1200,224L1200,96L1440,96L1440,320L1200,320L1200,320L960,320L960,320L720,320L720,320L480,320L480,320L240,320L240,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>
