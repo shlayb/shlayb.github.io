@@ -1,121 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Shlayb|Portofolio</title>
+    <title>nayy <3</title>
+    <script src="https://kit.fontawesome.com/11fad7c8a5.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        background-color: #ececeb;
+      }
+      .box {
+        width: 100%;
+        height: 1200px;
+        position: absolute;
+        top: 0;
+      }
+      .nayy {
+        width: 100%;
+        height: 200px;
+        color: #d0c8b5;
+        font-family: retron2000;
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+      }
+      .music{
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        top: 300px;
+      }
+      .musicbox{
+        height: 750px;
+        width: 550px;
+        border-radius: 40px;
+        color: #d0c8b5;
+        position: absolute;
+        border: #2b2a28 solid 2px;
+        left: 300px;
+        background-color: #d0c8b5;
+      }
+      .img{
+        width: 410px;
+        height: 410px;
+        border-radius: 10px;
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        border: #2b2a28 solid 2px;
+      }
+      .play{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: #2b2a28 solid 2px;
+        background-color: #ececeb;
+        font-size: 35px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .play:active{
+        transform: translateY(4px) translateX(4px);
+      }
+      .judul{
+        font-size: 37px;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: black;
+      }
+      .penyanyi{
+        font-size: 27px;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      .kata{
+        height: 750px;
+        width: 550px;
+        border-radius: 35px;
+        border: #2b2a28 solid 2px;
+        position: absolute;
+        right: 300px;
+        background-color: rgba(208, 200, 181, 0.3);
+      }
+      .dear{
+        font-size: 35px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .text{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:bold;
+        position: absolute;
+        font-size: 25px;
+        left: 55px;
+      }
+      @media screen and (max-width: 1080px) {
+        .musicbox{
+          left: 210px;
+        }
+        .kata{
+          left: 210px;
+          top: 900px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="#">SHLAYB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Social media</a>
-            </li>
-          </ul>
+    <div class="box">
+      <div class="nayy">
+        <p>NAYY <i class="fas fa-heart"></i></=>
+      </div>
+      <div class="music">
+        <div class="musicbox">
+          <img class="img" src="https://media.discordapp.net/attachments/901679715453116427/952459132974301194/IMG-20211005-WA0081.jpg" alt="">
+          <p class="judul" style="top: 470px; left: 70px;">Hati-Hati di Jalan</p>
+          <p class="penyanyi" style="top: 520px; left: 70px;">Tulus</p>
+          <audio id="myaudio" autoplay>
+            <source src="https://cdn.discordapp.com/attachments/901679715453116427/952462556415545394/y2mate.com_-_TULUS_HatiHati_di_Jalan_Official_Lyric_Video.mp3">
+          </audio>
+          <button onclick="playaudio();" class="play" style="position: absolute; left: 225px; top: 600px;"> <i class="fas fa-play"></i></button>
+        </div>
+        <div class="kata">
+          <h1 class="dear">Dear nay <i class="fas fa-heart"></i></h1>
+          <p class="text" style="top: 120px;">it's maybe not special fo u.</p>
+          <p class="text" style="top: 160px;">but, i just wanna tell you :)</p>
+          <p class="text" style="top: 200px;">no, im not asking u to back </p>
+          <p class="text" style="top: 240px;">like before, im just wanna be</p>
+          <p class="text" style="top: 280px;">someone special to u, I wanna </p>
+          <p class="text" style="top: 320px;">be the one that makes your day, </p>
+          <p class="text" style="top: 360px;">who always beside you when  </p>
+          <p class="text" style="top: 400px;">you're sad, alone, need someone </p>
+          <p class="text" style="top: 440px;">to talk to, and who'll always </p>
+          <p class="text" style="top: 480px;">cheer you up when u sad.</p>
+          <p class="text" style="top: 600px;left: 400px;">-yubi</p>
         </div>
       </div>
-    </nav>
-    <!-- end  navbar -->
-    <!-- jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/shlayb-01.png" alt="my logo" width="200px" class="rounded-circle" />
-      <h1 class="display-4" style="color: white">Hello, world!</h1>
-      <p class="lead" style="color: white">Iam a student</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,288L0,192L240,192L240,256L480,256L480,64L720,64L720,128L960,128L960,224L1200,224L1200,96L1440,96L1440,320L1200,320L1200,320L960,320L960,320L720,320L720,320L480,320L480,320L240,320L240,320L0,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- end -->
-    <!-- about me -->
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-">
-          <h2>About Me</h2>
-        </div>
-        <div class="row justify-content-around fs-4 text-center mt-5">
-          <div class="col-md-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe id, accusamus alias nemo aliquid quaerat, beatae vero corrupti non reiciendis quisquam praesentium assumenda!</div>
-          <div class="col-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque ipsam incidunt aut maxime sunt, cupiditate illum repellat vel corporis quibusdam optio voluptatibus nam.</div>
-        </div>
-      </div>
-      </svg>
     </div>
-    <!-- end -->
-    <div>
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#535353"
-          fill-opacity="1"
-          d="M0,32L0,160L240,160L240,224L480,224L480,288L720,288L720,64L960,64L960,192L1200,192L1200,128L1440,128L1440,320L1200,320L1200,320L960,320L960,320L720,320L720,320L480,320L480,320L240,320L240,320L0,320L0,320Z"
-        ></path>
-      </svg>
+    <div class="box" style="top: 1200px">
     </div>
-    <!-- procject -->
-    <section id="projects" style="background-color: #535353">
-      <div class="container">
-        <div class="row text-center ">
-          <div class="col mt-3">
-            <h3>My Project</h3>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md-4 mb-3">
-            <div class="card" >
-              <img src="img/pi 1.JPG" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" style="text-align: center;">PROJECT 1</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card" >
-              <img src="img/pi 2.JPG" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" style="text-align: center;">PROJECT 2</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" >
-              <img src="img/pi 3.JPG" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" style="text-align: center;">PROJECT 3</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,288L0,192L240,192L240,256L480,256L480,64L720,64L720,128L960,128L960,224L1200,224L1200,96L1440,96L1440,320L1200,320L1200,320L960,320L960,320L720,320L720,320L480,320L480,320L240,320L240,320L0,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- end -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+      var x = document.getElementById("myaudio")
+      function playaudio() {
+        if (x.paused)
+          x.play();
+        else
+          x.pause();
+      }
+    </script>
   </body>
 </html>
